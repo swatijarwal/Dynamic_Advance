@@ -20,7 +20,7 @@ public class TestMarksheet {
 		bean.setId(5);
 		bean.setName("s");
 		MarksheetModel model = new MarksheetModel();
-	     List list=   model.search(bean, 0, 0);
+	     List list=   model.search(bean, 1, 5);
 		  Iterator it=    list.iterator();
 		  while(it.hasNext())
 		  {

@@ -6,11 +6,24 @@
 <meta charset="ISO-8859-1">
 <title>Insert title here</title>
 </head>
-<body>
+<body>  
+
              <center>
+             
          <form action="MarksheetCtl" method="post">
+         
+              <%  String msg = request.getParameter("msg"); %>
            <%@ include file="Header.jsp" %>
+           <h1>Marksheet</h1>
          <table>
+            
+         <tr>
+          <%if(msg!=null){%>
+        	  
+        	 <%=msg %>
+        <%} %>  
+         </tr>
+         
          
          <tr>
          <th>Name</th>
@@ -36,7 +49,12 @@
          </tr>
          <tr>
          <th></th>
-         <td><input type="submit" name="operation" value="SignUp"></td>
+         <td><input type="submit" name="operation" value="Add">
+             <input type="submit" name="operation" value="Update">
+             <input type="submit" name="operation" value="Delete">
+             
+         
+         </td>
          
          
          

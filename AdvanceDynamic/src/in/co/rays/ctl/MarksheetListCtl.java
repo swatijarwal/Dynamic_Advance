@@ -41,7 +41,26 @@ public class MarksheetListCtl extends HttpServlet {
 	@Override
 	protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		
-		      String name=    req.getParameter("name");
+		      String name= req.getParameter("name");
+		      String rollNo= req.getParameter("rollNo");
+		    
+		       String op=   req.getParameter("operation");
+		      if(op.equals("search"))
+		      {
+		    	  MarksheetBean bean = new MarksheetBean();
+		    	  bean.setName(name);
+		    	  
+		    	 
+		    	  bean.setRollNo(Integer.parseInt(rollNo));
+		    	    MarksheetModel model = new MarksheetModel();
+		    	    try {
+						model.search(bean, 0, 0);
+					} catch (Exception e) {
+						// TODO Auto-generated catch block
+						e.printStackTrace();
+					}
+		      }
+		             
 		
 			}
 

@@ -8,12 +8,13 @@
 </head>
 <body>
 <center>
-         <form action="LoginIdCtl" method="post">
+         <form action="LoginCtl" method="post">
          <%@ include file="Header.jsp"%>
          
          
          <%
 			String msg = (String) request.getAttribute("msg");
+         String uri = (String) request.getAttribute("uri");
 		%>
 		<table>
 			<tr>
@@ -45,6 +46,7 @@
 				</tr>
          
          </table>
+               <input type="hidden" name="uri" value="<%=uri%>">
           <%@ include file="Footer.jsp"%>  
          
          </form>

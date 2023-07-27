@@ -11,12 +11,13 @@
 </head>
 <body>
 
-       <form action="UserListCtl" method="post">
+       <form action="UserListCtl.do" method="post">
        
        <%@ include file="Header.jsp"%>
 
 		<%
 			List list = (List) request.getAttribute("list");
+				    int pageNo=  (Integer) request.getAttribute("pageNo");
 
 			Iterator it = list.iterator();
 		%>
@@ -50,7 +51,12 @@
 				while (it.hasNext()) {
 
 					UserBean bean = (UserBean) it.next();
+					
+					
+			        
+
 			%>
+			
 
 			<tr>
 				<td><%=bean.getId()%></td>
@@ -60,17 +66,36 @@
 				<td><%=bean.getPassword()%></td>
 				<td><%=bean.getDob()%></td>
 				<td><%=bean.getAddress()%></td>
+				
 				<td><a href="UserCtl?id=<%=bean.getId()%>">edit</a></td>	
 			</tr>
-
+              
+               	
+		     
+				
+		
+		   
 			<%
 				}
 			%>
-				
-
+			
+			
+			 <tr>
+			         
+			 		
+			 		
+			 		
+				<td><input type="hidden" name="pageNo" value=<%=pageNo %>></td>
+                                      
+			 		
+			 	
+			 		</tr>
+			
 
 		</table>
-
+                <td aling="left"><input type="submit"  name="operation" value="previous"></td>
+                 <td align="right"><input type="submit" name="operation" value="next">
+			 		</td>
 	</form>
 
 </body>

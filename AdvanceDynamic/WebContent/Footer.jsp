@@ -9,7 +9,7 @@
 <body>
 <CENTER>
           <hr>
-        <H3>(c) Copyrights SunilOS Infotech Pvt. Ltd.</H3>
+        <H3>(c) Copyrights Dynamic_Advance Infotech Pvt. Ltd.</H3>
     </CENTER>
 </body>
 </html>

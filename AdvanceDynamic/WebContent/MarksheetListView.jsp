@@ -10,12 +10,23 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="MarksheetListCtl">
+	<form action="MarksheetListCtl" method="post">
 		<%
 			List list = (List) request.getAttribute("list");
 
 			Iterator it = list.iterator();
 		%>
+		
+			<table>
+		     
+		<tr>
+		<td><input type="text"  name="name" placeholder="Enter firstName">
+		 <td><input type="text" name="rollNo">
+		</td>
+		<td> <input type="submit" name="operation" value="search" ></td>
+		</tr>
+		
+		</table>
 		<table border="1">
 			<tr>
 				<th>Id</th>
@@ -24,6 +35,7 @@
 				<th>Physics</th>
 				<th>Chemistry</th>
 				<th>maths</th>
+				<th>Edit</th>
 			</tr>
 
 			<%
@@ -38,7 +50,7 @@
 				<td><%=bean.getPhysics()%></td>
 				<td><%=bean.getChemistry()%></td>
 				<td><%=bean.getMaths()%></td>
-
+                 <td><a href="MarksheetList?id=<%=bean.getId()%>">edit</a></td>
 
 
 			</tr>

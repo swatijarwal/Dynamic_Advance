@@ -60,7 +60,7 @@
 						</tr>
 						<tr>
 							<td align="right" colspan="2"><input type="submit"
-								name="operation" value="SignUp"></td>
+								name="operation" value="add"></td>
 						</tr>
 					</table>
 					<%@ include file="Footer.jsp"%>

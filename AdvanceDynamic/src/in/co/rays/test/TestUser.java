@@ -66,7 +66,7 @@ public class TestUser {
 	   bean.setFirstName("s");
 	   bean.setLastName("j");
 	     UserModel model = new UserModel();
-	 List list=    model.search(bean, 0, 0);
+	 List list=    model.search(bean, 1, 5);
 	Iterator it= list.iterator();
 	 while(it.hasNext())
 	 {
